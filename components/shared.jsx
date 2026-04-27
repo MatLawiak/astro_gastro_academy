@@ -102,17 +102,16 @@ const ConstellationDots = ({ style }) => (
 );
 
 /* --------------- Logo --------------- */
-const Logo = ({ size = 30, color = "var(--ink)", compact = false }) => (
-  <div style={{ display: "inline-flex", alignItems: "center", gap: 10, color }}>
-    <svg width={size} height={size} viewBox="0 0 40 40" aria-hidden>
-      <circle cx="20" cy="20" r="15" fill="currentColor" />
-      <circle cx="20" cy="20" r="15" fill="none" stroke="currentColor" strokeWidth="0.8" opacity="0.6" transform="rotate(-20 20 20) scale(1.15 0.45) translate(-3 22)"/>
-      <circle cx="28" cy="12" r="2.5" fill="var(--mustard)" />
-    </svg>
+const Logo = ({ size = 44, compact = false }) => (
+  <div style={{ display: "inline-flex", alignItems: "center", gap: 10 }}>
+    <img
+      src="https://astrogastro.eu/wp-content/uploads/2024/10/logo_navyblue-480x274.png"
+      alt="Astrogastro"
+      style={{ height: size, width: "auto", display: "block" }}
+    />
     {!compact && (
-      <div style={{ lineHeight: 1 }}>
-        <div style={{ fontFamily: "var(--font-display)", fontSize: 18, fontWeight: 800, letterSpacing: "-0.02em" }}>astrogastro</div>
-        <div style={{ fontFamily: "var(--font-body)", fontSize: 9, letterSpacing: "0.28em", textTransform: "uppercase", color: "var(--ink-muted)", marginTop: 3, fontWeight: 600 }}>.eu / kursy</div>
+      <div style={{ lineHeight: 1, fontFamily: "var(--font-body)", fontSize: 9, letterSpacing: "0.28em", textTransform: "uppercase", color: "var(--ink-muted)", fontWeight: 600 }}>
+        .eu / kursy
       </div>
     )}
   </div>
@@ -131,8 +130,8 @@ const PublicNav = ({ onNav, current }) => {
     <a href="#" onClick={(e)=>{e.preventDefault(); onNav(key); setOpen(false);}}
        className={current===key ? "active" : ""}
        style={{
-         color: "var(--ink)", fontSize: 14, fontWeight: 500, letterSpacing: "0.01em",
-         padding: "8px 4px", borderBottom: current===key ? "1.5px solid var(--accent)" : "1.5px solid transparent",
+         color: "var(--ink)", fontSize: 13, fontWeight: 500, letterSpacing: "0.01em",
+         padding: "6px 4px", borderBottom: current===key ? "1.5px solid var(--accent)" : "1.5px solid transparent",
          textDecoration: "none",
        }}>{label}</a>
   );

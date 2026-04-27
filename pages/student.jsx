@@ -523,7 +523,7 @@ const StudentProfile = ({ onNav }) => (
       </div>
       <div className="card" style={{ padding: 28, background: "color-mix(in oklab, var(--mustard) 18%, var(--bg-card))", borderColor: "color-mix(in oklab, var(--mustard) 40%, var(--line))" }}>
         <div className="tiny" style={{ marginBottom: 18 }}>Mój dostęp</div>
-        <div style={{ fontFamily: "var(--font-display)", fontSize: 28, fontWeight: 500 }}>90 dni</div>
+        <div style={{ fontFamily: "var(--font-display)", fontSize: 28, fontWeight: 500 }}>Rocznie</div>
         <div className="muted italic" style={{ fontFamily: "var(--font-display)", fontSize: 16, marginTop: 4 }}>dostęp do całego Astroworld</div>
         <div style={{ marginTop: 20, padding: "14px 16px", background: "var(--bg-card)", borderRadius: "var(--r-sm)", border: "1px solid var(--line)" }}>
           <div style={{ display: "flex", justifyContent: "space-between", fontSize: 14 }}>
@@ -535,7 +535,7 @@ const StudentProfile = ({ onNav }) => (
         </div>
         <button className="btn primary full" style={{ marginTop: 20 }} onClick={()=>onNav("pricing")}>Odnów dostęp</button>
         <div className="muted" style={{ fontSize: 12, marginTop: 12, textAlign: "center" }}>
-          Historia: 3 zakupy, łącznie 577 zł
+          Historia: 3 zakupy, łącznie 327 zł
         </div>
       </div>
     </div>
@@ -552,9 +552,9 @@ const StudentProfile = ({ onNav }) => (
         </thead>
         <tbody>
           {[
-            ["14.02.2026","199 zł","90 dni"],
-            ["12.11.2025","199 zł","90 dni"],
-            ["05.08.2025","179 zł","30 dni"],
+            ["14.02.2026","249 zł","Rocznie"],
+            ["12.02.2025","39 zł","Miesięcznie"],
+            ["12.01.2025","39 zł","Miesięcznie"],
           ].map((r,i)=>(
             <tr key={i} style={{ borderTop: "1px solid var(--line)" }}>
               <td style={{ padding: "14px 0", fontFamily: "ui-monospace, monospace" }}>{r[0]}</td>

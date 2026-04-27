@@ -266,7 +266,7 @@ const CheckoutPage = ({ onNav }) => (
   <div className="container" style={{ padding: "40px 28px", maxWidth: 640 }}>
     <button className="btn ghost sm" onClick={()=>onNav("pricing")} style={{ marginBottom: 20 }}><Icon name="chevronLeft" size={14}/> Wróć do planów</button>
     <h1 style={{ fontSize: 40 }}>Płatność</h1>
-    <p className="muted" style={{ marginTop: 6 }}>Wybrany plan: <strong>90 dni</strong> — 199 zł</p>
+    <p className="muted" style={{ marginTop: 6 }}>Wybrany plan: <strong>Rocznie</strong> — 249 zł</p>
 
     <div className="card" style={{ padding: 28, marginTop: 28 }}>
       <div style={{ display: "grid", gap: 16 }}>
@@ -301,7 +301,7 @@ const CheckoutPage = ({ onNav }) => (
         ))}
       </div>
       <button className="btn primary full lg" style={{ marginTop: 20 }} onClick={()=>onNav("student-dashboard")}>
-        Zapłać 199 zł →
+        Zapłać 249 zł →
       </button>
       <div style={{ textAlign: "center", color: "var(--ink-muted)", fontSize: 12, marginTop: 14 }}>
         Płatność obsługiwana przez Hotpay · SSL

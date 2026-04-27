@@ -134,7 +134,7 @@ const AdminDashboard = ({ setView }) => (
         <h3 style={{ fontFamily: "var(--font-display)", fontSize: 22, marginBottom: 18 }}>Ostatnia aktywność</h3>
         {[
           { who: "Mateusz K.", what: "zaczął kurs", obj: "Azjatycki Street Food", time: "2 min" },
-          { who: "Tomek W.", what: "nowa płatność", obj: "199 zł", time: "18 min" },
+          { who: "Tomek W.", what: "nowa płatność", obj: "249 zł", time: "18 min" },
           { who: "Jan S.", what: "ukończył kurs", obj: "Pomidolove Włochy", time: "1 godz." },
           { who: "Julia P.", what: "zarejestrował się", obj: "", time: "3 godz." },
         ].map((a, i) => (
@@ -485,12 +485,12 @@ const AdminStudents = () => {
   const [tab, setTab] = useState("all");
   const tabs = [["all","Wszyscy",127],["active","Aktywni",89],["expiring","Wygasający",7],["expired","Wygasłi",31]];
   const rows = [
-    { n: "Mateusz Kowalski", e: "mateusz@gmail.com", plan: "90 dni", until: "12.05.26", p: 0.75, status: "active" },
-    { n: "Tomek Wiśniewski", e: "tomek.w@gmail.com", plan: "365 dni", until: "22.11.26", p: 0.32, status: "active" },
-    { n: "Jan Szymański", e: "jan.s@onet.pl", plan: "30 dni", until: "27.04.26", p: 1.0, status: "expiring" },
-    { n: "Piotr Piotrowski", e: "p.piotrowski@gmail.com", plan: "90 dni", until: "02.07.26", p: 0.5, status: "active" },
-    { n: "Kuba Link", e: "k.nowak@wp.pl", plan: "30 dni", until: "20.04.26", p: 0.14, status: "expiring" },
-    { n: "Filip Lewandowski", e: "filip@interia.pl", plan: "365 dni", until: "15.03.27", p: 0.88, status: "active" },
+    { n: "Mateusz Kowalski", e: "mateusz@gmail.com", plan: "Miesięcznie", until: "12.05.26", p: 0.75, status: "active" },
+    { n: "Tomek Wiśniewski", e: "tomek.w@gmail.com", plan: "Rocznie", until: "22.11.26", p: 0.32, status: "active" },
+    { n: "Jan Szymański", e: "jan.s@onet.pl", plan: "Miesięcznie", until: "27.04.26", p: 1.0, status: "expiring" },
+    { n: "Piotr Piotrowski", e: "p.piotrowski@gmail.com", plan: "Miesięcznie", until: "02.07.26", p: 0.5, status: "active" },
+    { n: "Kuba Link", e: "k.nowak@wp.pl", plan: "Miesięcznie", until: "20.04.26", p: 0.14, status: "expiring" },
+    { n: "Filip Lewandowski", e: "filip@interia.pl", plan: "Rocznie", until: "15.03.27", p: 0.88, status: "active" },
   ];
   const filtered = tab === "all" ? rows : rows.filter(r => r.status === tab);
   return (
@@ -627,7 +627,7 @@ const AdminSettings = () => {
       )}
       {tab === "plans" && (
         <div className="card" style={{ padding: 32 }}>
-          {[["30 dni","79","Elastyczny miesięczny"],["90 dni","199","Najpopularniejszy"],["365 dni","599","Roczny dostęp"]].map(([l,p,s],i)=>(
+          {[["Miesięcznie","39","Subskrypcja miesięczna · anulujesz kiedy chcesz"],["Rocznie","249","Najlepszy wybór · oszczędzasz 47%"]].map(([l,p,s],i)=>(
             <div key={i} style={{ display: "grid", gridTemplateColumns: "1fr 120px 2fr auto", gap: 14, padding: "14px 0", borderTop: i===0?"none":"1px solid var(--line)", alignItems: "end" }}>
               <div><label className="label">Nazwa</label><input className="input" defaultValue={l}/></div>
               <div><label className="label">Cena (zł)</label><input className="input" defaultValue={p}/></div>

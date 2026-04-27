@@ -148,7 +148,7 @@ const DesignSystemPage = () => {
               <div><label className="label">Email</label><input className="input" defaultValue="kuba@gastronauci.pl"/></div>
               <div><label className="label">Telefon</label><input className="input" placeholder="+48"/></div>
               <div><label className="label">Plan</label>
-                <select className="select"><option>30 dni</option><option>90 dni</option><option>365 dni</option></select>
+                <select className="select"><option>Miesięcznie</option><option>Rocznie</option></select>
               </div>
               <div><label className="label">Hasło</label><input className="input" type="password" defaultValue="********"/></div>
             </div>

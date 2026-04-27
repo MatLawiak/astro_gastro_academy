@@ -43,7 +43,7 @@ const HeroEditorial = ({ onNav }) => (
           Fermentacja, kuchnia azjatycka, grill, makarony od zera. Bez ściemy.
         </p>
         <div style={{ display: "flex", gap: 14, marginTop: 32, flexWrap: "wrap" }}>
-          <button className="btn primary lg" onClick={()=>onNav("pricing")}>Wystartuj · 79 zł / 30 dni</button>
+          <button className="btn primary lg" onClick={()=>onNav("pricing")}>Wystartuj · 39 zł / mc</button>
           <button className="btn ghost lg" style={{ gap: 10 }} onClick={()=>onNav("lesson")}>
             <Icon name="playOutline" /> Zobacz darmowy odcinek
           </button>
@@ -100,7 +100,7 @@ const HeroAsymmetric = ({ onNav }) => (
         Kursy Kuby Linka. Fermentacja, azjatyckie podstawy, grill, makarony. Bez ściemy, z konkretem.
       </p>
       <div style={{ display: "flex", gap: 14, marginTop: 32, justifyContent: "center", flexWrap: "wrap" }}>
-        <button className="btn primary lg" onClick={()=>onNav("pricing")}>Wystartuj · 79 zł</button>
+        <button className="btn primary lg" onClick={()=>onNav("pricing")}>Wystartuj · 39 zł / mc</button>
         <button className="btn ghost lg" onClick={()=>onNav("lesson")}><Icon name="playOutline" /> Darmowy odcinek</button>
       </div>
       <div style={{ marginTop: 56, display: "grid", gridTemplateColumns: "1.2fr 0.8fr 1fr", gap: 18 }}>
@@ -128,7 +128,7 @@ const HeroFullBleed = ({ onNav }) => (
           Kursy kulinarne online od Kuby Linka. Fermentacja, azjatyckie podstawy, grill, makarony — z ludźmi, którzy naprawdę gotują.
         </p>
         <div style={{ display: "flex", gap: 14, marginTop: 32, flexWrap: "wrap" }}>
-          <button className="btn primary lg" onClick={()=>onNav("pricing")}>Wystartuj · 79 zł</button>
+          <button className="btn primary lg" onClick={()=>onNav("pricing")}>Wystartuj · 39 zł / mc</button>
           <button className="btn lg" style={{ background: "transparent", color: "var(--mustard)", border: "1.5px solid var(--mustard)" }} onClick={()=>onNav("lesson")}>
             <Icon name="playOutline" /> Darmowy odcinek
           </button>
@@ -251,7 +251,7 @@ const AboutKuba = () => (
 const HowItWorks = () => {
   const steps = [
     { n: "01", title: "Zarejestruj się", desc: "Bez karty. Tylko email — i masz dostęp do bezpłatnych odcinków." },
-    { n: "02", title: "Wybierz plan", desc: "30, 90 albo 365 dni — w każdym pełen dostęp do wszystkich kursów." },
+    { n: "02", title: "Wybierz plan", desc: "Subskrypcja miesięczna 39 zł lub roczna 249 zł — w każdym pełen dostęp do wszystkich kursów." },
     { n: "03", title: "Oglądaj, gotuj, wracaj", desc: "Lekcje w swoim tempie. PDF-y, listy zakupów, notatki." },
     { n: "04", title: "Gadaj z kolektywem", desc: "Dyskord Gastronautów — pytasz, pokazujesz efekty, dostajesz feedback." },
   ];
@@ -275,15 +275,14 @@ const HowItWorks = () => {
 
 const Pricing = ({ onNav, compact = false }) => {
   const plans = [
-    { id: "30",  label: "30 dni",  price: "79 zł",  sub: "jeden miesiąc, bez zobowiązań", perks: ["Pełny dostęp do 12 kursów","Dyskord Gastronautów","Materiały PDF i listy zakupów","Certyfikat ukończenia"], ribbon: null },
-    { id: "90",  label: "90 dni",  price: "199 zł", sub: "oszczędzasz 16%", badge: "Najpopularniejszy", perks: ["Wszystko z planu 30 dni","3× dłuższy dostęp","Bonus: e-book Niebieska kuchnia"], ribbon: "accent" },
-    { id: "365", label: "365 dni", price: "599 zł", sub: "oszczędzasz 37%", perks: ["Wszystko z planu 90 dni","Rok pełnego dostępu","Q&A 1:1 z Kubą (30 min)"], ribbon: null },
+    { id: "monthly", label: "Miesięcznie", price: "39 zł", sub: "subskrypcja miesięczna · anulujesz kiedy chcesz", perks: ["Pełny dostęp do 12 kursów","Dyskord Gastronautów","Materiały PDF i listy zakupów","Certyfikat ukończenia"], ribbon: null },
+    { id: "yearly",  label: "Rocznie",     price: "249 zł", sub: "oszczędzasz 47% — płatność raz w roku", badge: "Najlepszy wybór", perks: ["Wszystko z planu miesięcznego","Rok pełnego dostępu","Bonus: e-book Niebieska kuchnia","Q&A 1:1 z Kubą (30 min)"], ribbon: "accent" },
   ];
   return (
     <section style={{ padding: compact ? "40px 0" : "120px 0" }}>
       <div className="container">
         {!compact && <SectionHead eyebrow="Cennik" title={<>Wybierz plan, <span style={{color:"var(--mustard-deep)", fontStyle:"italic"}}>i jedziemy</span></>} subtitle="Pełny dostęp do wszystkich kursów, materiałów i Dyskorda Gastronautów w każdym planie." />}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }} className="pricing-grid">
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 24, maxWidth: 860, margin: "0 auto" }} className="pricing-grid">
           {plans.map(p => (
             <div key={p.id} className="card" style={{
               padding: 28, position: "relative",
@@ -353,7 +352,7 @@ const Testimonials = () => {
 
 const Faq = () => {
   const items = [
-    ["Jak długo mam dostęp?", "Dostęp trwa tyle, na ile wybierzesz plan — 30, 90 lub 365 dni. W każdej chwili możesz przedłużyć z panelu Astroworld."],
+    ["Jak długo mam dostęp?", "Subskrypcja miesięczna odnawia się automatycznie co miesiąc — anulujesz kiedy chcesz. Plan roczny daje 365 dni jednorazowej płatności. W każdej chwili możesz zmienić plan z panelu Astroworld."],
     ["Czy mogę oglądać na telefonie?", "Tak. Platforma działa w przeglądarce mobilnej, bez instalowania aplikacji. Lekcje zoptymalizowane pod mały ekran."],
     ["Jak działa płatność BLIK?", "Klikasz plan → przekierowanie do Hotpay → wybierasz BLIK i wklejasz kod z banku. Dostęp masz od razu."],
     ["Co jeśli zrezygnuję?", "Plan nie odnawia się automatycznie. Jeżeli nie przedłużysz — dostęp wygasa w ostatnim dniu. Bez haczyków."],
