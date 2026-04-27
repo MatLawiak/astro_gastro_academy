@@ -23,7 +23,7 @@ const DesignSystemPage = () => {
         <div className="orbit" style={{ width: 800, height: 800, top: -300, right: -200 }}/>
         <div className="container" style={{ padding: "80px 28px 64px", position: "relative" }}>
           <div className="tiny" style={{ color: "var(--mustard)", marginBottom: 18 }}>Design system · Astrogastro</div>
-          <h1 style={{ color: "var(--bg-card)", fontSize: "clamp(44px, 5.5vw, 72px)", maxWidth: 880, fontWeight: 800 }}>
+          <h1 style={{ color: "var(--bg-card)", fontSize: "clamp(44px, 5.5vw, 72px)", maxWidth: 880, fontWeight: 700 }}>
             Tokeny, typografia i komponenty <span style={{ color: "var(--mustard)", fontStyle: "italic" }}>Gastronautów</span>
           </h1>
           <p style={{ color: "color-mix(in oklab, var(--bg-card) 75%, transparent)", maxWidth: 640, marginTop: 18, fontSize: 17 }}>
@@ -59,8 +59,8 @@ const DesignSystemPage = () => {
           <div style={{ display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: 32 }} className="ds-type-grid">
             <div className="card" style={{ padding: 32 }}>
               <div className="tiny" style={{ marginBottom: 20 }}>Display · Syne</div>
-              <div style={{ fontFamily: "var(--font-display)", fontSize: 80, lineHeight: 0.95, letterSpacing: "-0.035em", fontWeight: 800 }}>Gastronauci</div>
-              <div style={{ fontFamily: "var(--font-display)", fontSize: 48, lineHeight: 1.05, marginTop: 22, fontWeight: 800, letterSpacing: "-0.025em" }}>Welcome to <em style={{ color: "var(--mustard-deep)", fontStyle: "italic" }}>Astroworld</em></div>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: 80, lineHeight: 0.95, letterSpacing: "-0.035em", fontWeight: 700 }}>Gastronauci</div>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: 48, lineHeight: 1.05, marginTop: 22, fontWeight: 700, letterSpacing: "-0.025em" }}>Welcome to <em style={{ color: "var(--mustard-deep)", fontStyle: "italic" }}>Astroworld</em></div>
               <div style={{ fontFamily: "var(--font-display)", fontSize: 28, marginTop: 22, fontWeight: 700 }}>Fermentacja od podstaw</div>
               <hr className="gold" style={{ margin: "28px 0" }} />
               <Row label="Hero"  sample="104 / 0.92 / -0.045em / 800" />

@@ -34,7 +34,7 @@ const HeroEditorial = ({ onNav }) => (
     <div className="container" style={{ display: "grid", gridTemplateColumns: "1.15fr 1fr", gap: 56, alignItems: "center", position: "relative" }} className="hero-grid">
       <div>
         <Greeting />
-        <h1 style={{ fontSize: "var(--fs-hero)", marginTop: 28, fontWeight: 800, letterSpacing: "-0.035em" }}>
+        <h1 style={{ fontSize: "var(--fs-hero)", marginTop: 28, fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.05 }}>
           Gotuj jak <span style={{ color: "var(--mustard-deep)", fontStyle: "italic", fontFamily: "var(--font-display)" }}>Gastronauta</span>.<br/>
           Nie jak YouTube.
         </h1>
@@ -63,7 +63,12 @@ const HeroEditorial = ({ onNav }) => (
         </div>
       </div>
       <div style={{ position: "relative" }}>
-        <Photo label="overhead · ramen · steam" ratio="4/5" style={{ boxShadow: "var(--shadow-lg)", borderRadius: "var(--r-lg)" }} />
+        <Photo
+          src="https://astrogastro.eu/wp-content/uploads/2025/06/Astrogastro-Post-1-of-19-min-980x1225.jpg"
+          label="Astrogastro — Kuba Linek"
+          ratio="4/5"
+          style={{ boxShadow: "var(--shadow-lg)", borderRadius: "var(--r-lg)" }}
+        />
         <div className="card soft" style={{
           position: "absolute", left: -30, bottom: 30, padding: "14px 18px",
           display: "flex", alignItems: "center", gap: 12, boxShadow: "var(--shadow-lg)", maxWidth: 280, background: "var(--navy)", color: "var(--bg-card)", border: "none",
@@ -93,7 +98,7 @@ const HeroAsymmetric = ({ onNav }) => (
   <section style={{ padding: "60px 0 40px", position: "relative", overflow: "hidden" }}>
     <div className="container" style={{ position: "relative", textAlign: "center", paddingTop: 40 }}>
       <Greeting />
-      <h1 style={{ fontSize: "clamp(56px, 9vw, 140px)", lineHeight: 0.92, letterSpacing: "-0.045em", fontWeight: 800, maxWidth: 1200, margin: "28px auto 0" }}>
+      <h1 style={{ fontSize: "clamp(44px, 6.5vw, 96px)", lineHeight: 1.0, letterSpacing: "-0.02em", fontWeight: 700, maxWidth: 1100, margin: "28px auto 0" }}>
         Gotuj jak <span style={{ fontStyle: "italic", color: "var(--mustard-deep)" }}>Gastronauta.</span>
       </h1>
       <p style={{ fontSize: 19, color: "var(--ink-2)", marginTop: 28, maxWidth: 580, marginLeft: "auto", marginRight: "auto" }}>
@@ -121,7 +126,7 @@ const HeroFullBleed = ({ onNav }) => (
         <div style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: "6px 14px", background: "var(--mustard)", color: "var(--navy)", borderRadius: 999, fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", fontWeight: 700 }}>
           Serwus, Gastronauto
         </div>
-        <h1 style={{ fontSize: "clamp(52px, 7vw, 100px)", lineHeight: 0.95, color: "var(--bg-card)", marginTop: 24, fontWeight: 800, letterSpacing: "-0.035em" }}>
+        <h1 style={{ fontSize: "clamp(40px, 5.5vw, 76px)", lineHeight: 1.05, color: "var(--bg-card)", marginTop: 24, fontWeight: 700, letterSpacing: "-0.02em" }}>
           Gotuj jak <span style={{ color: "var(--mustard)", fontStyle: "italic" }}>Gastronauta.</span>
         </h1>
         <p style={{ fontSize: 19, color: "color-mix(in oklab, var(--bg-card) 80%, transparent)", marginTop: 24, maxWidth: 520 }}>
@@ -224,7 +229,12 @@ const FeaturedCourses = ({ onNav }) => (
 const AboutKuba = () => (
   <section style={{ padding: "120px 0" }}>
     <div className="container" style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: 56, alignItems: "center" }} className="hero-grid">
-      <Photo label="kuba link · portret · studio" ratio="4/5" style={{ borderRadius: "var(--r-lg)", boxShadow: "var(--shadow-lg)" }} />
+      <Photo
+        src="https://astrogastro.eu/wp-content/uploads/2025/06/Astrogastro-Post-1-of-19-min-980x1225.jpg"
+        label="Kuba Linek — Astrogastro"
+        ratio="4/5"
+        style={{ borderRadius: "var(--r-lg)", boxShadow: "var(--shadow-lg)" }}
+      />
       <div>
         <div className="tiny" style={{ color: "var(--mustard-deep)", marginBottom: 14 }}>Twój kapitan</div>
         <h2>Kuba Link. Gastronauta, szef, kolekcjoner ostrych noży.</h2>
@@ -238,7 +248,7 @@ const AboutKuba = () => (
         <div style={{ display: "flex", gap: 28, marginTop: 32, flexWrap: "wrap" }}>
           {[["10+","lat w restauracjach"],["2 400+","Gastronautów"],["12","kursów online"]].map(([v,l])=>(
             <div key={l}>
-              <div style={{ fontFamily: "var(--font-display)", fontSize: 40, fontWeight: 800, color: "var(--navy)", lineHeight: 1 }}>{v}</div>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: 40, fontWeight: 700, color: "var(--navy)", lineHeight: 1 }}>{v}</div>
               <div className="muted" style={{ fontSize: 13, marginTop: 4 }}>{l}</div>
             </div>
           ))}
@@ -296,7 +306,7 @@ const Pricing = ({ onNav, compact = false }) => {
                 <div style={{ position: "absolute", top: -14, left: 24, background: "var(--mustard)", color: "var(--navy)", padding: "6px 14px", fontSize: 11, fontWeight: 700, letterSpacing: "0.08em", borderRadius: 999, textTransform: "uppercase" }}>{p.badge}</div>
               )}
               <div className="tiny" style={{ color: p.ribbon === "accent" ? "var(--mustard)" : "var(--ink-muted)" }}>{p.label}</div>
-              <div style={{ fontFamily: "var(--font-display)", fontSize: 56, fontWeight: 800, lineHeight: 1, marginTop: 10, letterSpacing: "-0.03em" }}>{p.price}</div>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: 56, fontWeight: 700, lineHeight: 1, marginTop: 10, letterSpacing: "-0.03em" }}>{p.price}</div>
               <div style={{ fontSize: 14, marginTop: 6, opacity: 0.75 }}>{p.sub}</div>
               <hr style={{ margin: "22px 0", border: "none", borderTop: "1px solid " + (p.ribbon === "accent" ? "rgba(255,255,255,0.15)" : "var(--line)") }} />
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 12 }}>
@@ -379,7 +389,7 @@ const FinalCta = ({ onNav }) => (
       <div className="surface-dark" style={{ borderRadius: "var(--r-lg)", padding: "80px 40px", textAlign: "center", position: "relative", overflow: "hidden" }}>
         <div className="orbit" style={{ width: 600, height: 600, top: -300, right: -200 }}/>
         <div className="tiny" style={{ color: "var(--mustard)", marginBottom: 16 }}>Ostatnia rzecz</div>
-        <h2 style={{ color: "var(--bg-card)", fontSize: "clamp(40px, 5.5vw, 72px)", fontWeight: 800 }}>
+        <h2 style={{ color: "var(--bg-card)", fontSize: "clamp(40px, 5.5vw, 72px)", fontWeight: 700 }}>
           Serwus. <span style={{ color: "var(--mustard)", fontStyle: "italic" }}>Jedziemy?</span>
         </h2>
         <p style={{ color: "color-mix(in oklab, var(--bg-card) 75%, transparent)", maxWidth: 520, margin: "16px auto 32px", fontSize: 17 }}>

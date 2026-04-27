@@ -66,11 +66,20 @@ const Icon = ({ name, size = 18, stroke = 1.6, style }) => {
 };
 
 /* --------------- Photo placeholder --------------- */
-const Photo = ({ label, ratio = "16/9", className = "", style = {} }) => (
-  <div className={`placeholder-photo ${className}`} style={{ aspectRatio: ratio, ...style }} aria-label={label}>
-    <div className="lbl">{label}</div>
-  </div>
-);
+const Photo = ({ label, ratio = "16/9", src, className = "", style = {} }) => {
+  if (src) {
+    return (
+      <div className={className} style={{ aspectRatio: ratio, overflow: "hidden", ...style }} aria-label={label}>
+        <img src={src} alt={label} loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+      </div>
+    );
+  }
+  return (
+    <div className={`placeholder-photo ${className}`} style={{ aspectRatio: ratio, ...style }} aria-label={label}>
+      <div className="lbl">{label}</div>
+    </div>
+  );
+};
 
 /* --------------- Round avatar placeholder --------------- */
 const Avatar = ({ name, size = 40, tone }) => {
