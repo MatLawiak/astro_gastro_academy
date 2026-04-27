@@ -35,12 +35,11 @@ const HeroEditorial = ({ onNav }) => (
       <div>
         <Greeting />
         <h1 style={{ fontSize: "var(--fs-hero)", marginTop: 28, fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.05 }}>
-          Gotuj jak <span style={{ color: "var(--mustard-deep)", fontStyle: "italic", fontFamily: "var(--font-display)" }}>Gastronauta</span>.<br/>
-          Nie jak YouTube.
+          Gotuj jak <span style={{ color: "var(--mustard-deep)", fontStyle: "italic", fontFamily: "var(--font-display)" }}>Gastronauta</span>.
         </h1>
         <p style={{ fontSize: 19, lineHeight: 1.5, color: "var(--ink-2)", marginTop: 22, maxWidth: 520 }}>
-          Kursy kulinarne online prowadzone przez <strong>Kubę Linka</strong> — szefa, podróżnika, założyciela kolektywu Gastronauci.
-          Fermentacja, kuchnia azjatycka, grill, makarony od zera. Bez ściemy.
+          Kursy kulinarne online prowadzone przez <strong>Kubę Linkę</strong> — szefa, podróżnika.<br/>
+          Poleć z nami na orbitę smaku i dołącz do społeczności świadomych Gastronautów!
         </p>
         <div style={{ display: "flex", gap: 14, marginTop: 32, flexWrap: "wrap" }}>
           <button className="btn primary lg" onClick={()=>onNav("pricing")}>Wystartuj · 39 zł / mc</button>

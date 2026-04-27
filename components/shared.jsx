@@ -157,9 +157,11 @@ const PublicNav = ({ onNav, current }) => {
         <nav className="public-nav-links" style={{ display: "flex", alignItems: "center", gap: 28 }}>
           {link("landing", "Start")}
           {link("catalog", "Kursy")}
-          {link("design-system", "Design system")}
-          {link("admin-dashboard", "Panel admina")}
-          {link("student-dashboard", "Astroworld")}
+          <a href="https://astrogastro.eu/" target="_blank" rel="noopener noreferrer"
+             style={{
+               color: "var(--ink)", fontSize: 13, fontWeight: 500, letterSpacing: "0.01em",
+               padding: "6px 4px", borderBottom: "1.5px solid transparent", textDecoration: "none",
+             }}>Astrogastro</a>
         </nav>
         <div className="public-nav-cta" style={{ display: "flex", alignItems: "center", gap: 10 }}>
           <button className="btn ghost sm" onClick={()=>onNav("student-dashboard")}>Zaloguj się</button>
@@ -174,10 +176,12 @@ const PublicNav = ({ onNav, current }) => {
       </div>
       {open && (
         <div style={{ background: "var(--bg-card)", borderTop: "1px solid var(--line)", padding: "12px 20px" }}>
-          {[["landing","Start"],["catalog","Kursy"],["design-system","Design system"],["admin-dashboard","Panel admina"],["student-dashboard","Astroworld"]].map(([k,l])=>(
+          {[["landing","Start"],["catalog","Kursy"]].map(([k,l])=>(
             <a key={k} href="#" onClick={(e)=>{e.preventDefault(); onNav(k); setOpen(false);}}
               style={{ display: "block", padding: "12px 0", fontSize: 16, color: "var(--ink)", borderBottom: "1px solid var(--line)" }}>{l}</a>
           ))}
+          <a href="https://astrogastro.eu/" target="_blank" rel="noopener noreferrer"
+            style={{ display: "block", padding: "12px 0", fontSize: 16, color: "var(--ink)", borderBottom: "1px solid var(--line)" }}>Astrogastro</a>
           <div style={{ display:"flex", gap: 10, paddingTop: 14 }}>
             <button className="btn secondary full" onClick={()=>onNav("student-dashboard")}>Zaloguj się</button>
             <button className="btn primary full" onClick={()=>onNav("pricing")}>Wypróbuj</button>
